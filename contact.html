@@ -58,8 +58,8 @@
                         </select>
                     </div>
                     <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun hidden"></i>
                     </button>
                 </div>
             </div>
@@ -267,6 +267,61 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     i18next.changeLanguage(i18next.language); // Or rerun the render logic
   }
 </script>
+
+<!-- Place this before </body> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeToggle = document.getElementById('theme-toggle');
+        const languageSelector = document.getElementById('language-selector');
+
+        if (!themeToggle || !languageSelector) return;
+
+        const moonIcon = themeToggle.querySelector('.fa-moon');
+        const sunIcon = themeToggle.querySelector('.fa-sun');
+
+        // Initial theme load
+        const savedTheme = localStorage.getItem('color-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkInit = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
+        document.documentElement.classList.toggle('dark', isDarkInit);
+        sunIcon.classList.toggle('hidden', !isDarkInit);
+        moonIcon.classList.toggle('hidden', isDarkInit);
+
+        // Toggle theme on click
+        themeToggle.addEventListener('click', function () {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+            sunIcon.classList.toggle('hidden', !isDark);
+            moonIcon.classList.toggle('hidden', isDark);
+        });
+
+        // Language logic
+        languageSelector.addEventListener('change', function () {
+            const lang = this.value;
+            localStorage.setItem('preferredLanguage', lang);
+            changeLanguage(lang);
+        });
+
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        languageSelector.value = savedLanguage;
+        changeLanguage(savedLanguage);
+
+        // Highlight nav
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('nav a').forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
+                link.classList.add('border-b-2', 'border-white');
+                link.classList.remove('hover:border-b-2');
+            } else {
+                link.classList.remove('border-b-2', 'border-white');
+                link.classList.add('hover:border-b-2');
+            }
+        });
+    });
+</script>
+
 
 
 </body>
