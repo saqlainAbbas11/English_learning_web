@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your English Teacher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-primary-700 dark:bg-primary-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold font-serif">MS. TEACHER</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <select id="language-selector" class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-1 rounded-md text-sm focus:outline-none">
+                            <option value="en">English</option>
+                            <option value="az">Azerbaijani</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ru">Russian</option>
+                        </select>
+                    </div>
+                    <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-white font-medium hover:border-b-2 hover:border-white pb-1" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" class="text-white font-medium hover:border-b-2 hover:border-white pb-1" data-i18n="about">About</a></li>
+                    <li><a href="contact.html" class="text-white font-medium border-b-2 border-white pb-1" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-i18n="get-in-touch">Get In Touch</h1>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white" data-i18n="contact-info">Contact Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-primary-500 dark:text-primary-400 text-2xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-white" data-i18n="email">Email</h3>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedwasifsarah@gmail.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                    ahmedwasifsarah@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-primary-500 dark:text-primary-400 text-2xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-white" data-i18n="phone">Phone</h3>
+                                <a target="_blank" href="tel:+994" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                    +994 **** ** ***
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-primary-500 dark:text-primary-400 text-2xl mr-4 mt-1">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-white">WhatsApp</h3>
+                                <a target="_blank" href="https://wa.me/994" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                    +994 **** ** ***
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-primary-500 dark:text-primary-400 text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-white" data-i18n="location">Location</h3>
+                                <p class="text-gray-600 dark:text-gray-300" data-i18n="baku">Baku, Azerbaijan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-lg font-medium mb-4 text-gray-800 dark:text-white" data-i18n="office-hours">Office Hours</h3>
+                        <p class="text-gray-600 dark:text-gray-300" data-i18n="hours">
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 2:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white" data-i18n="send-message">Send a Message</h2>
+                    <form id="contact-form" class="space-y-4">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-700">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-700">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-subject">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-700">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-700"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-500 dark:bg-primary-600 text-white py-3 px-6 rounded-md hover:bg-primary-600 dark:hover:bg-primary-700 transition-colors font-medium" data-i18n="form-submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="bg-primary-100 dark:bg-primary-900 p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800 dark:text-white" data-i18n="class-info">Class Information</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-medium mb-4 text-gray-800 dark:text-white" data-i18n="class-types">Class Types</h3>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 dark:text-primary-400 mr-2 mt-1"></i>
+                                <span data-i18n="individual">Individual lessons (1-on-1)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 dark:text-primary-400 mr-2 mt-1"></i>
+                                <span data-i18n="group">Group classes (max 6 students)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 dark:text-primary-400 mr-2 mt-1"></i>
+                                <span data-i18n="corporate">Corporate/Business English</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 dark:text-primary-400 mr-2 mt-1"></i>
+                                <span data-i18n="exam-prep">Exam preparation (IELTS, TOEFL)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-4 text-gray-800 dark:text-white" data-i18n="class-schedule">Class Schedule</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="schedule-desc">
+                            Classes are available throughout the week, including weekends. Please contact me to discuss available time slots that work for your schedule.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300" data-i18n="first-lesson">
+                            The first lesson is a 30-minute consultation at no charge, where we can discuss your goals and create a learning plan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">MS. TEACHER</h2>
+                    <p class="text-gray-400" data-i18n="footer-motto">Empowering students through language</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/english_speakingwithsarah?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-white hover:text-pink-400 text-2xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedwasifsarah@gmail.com" target="_blank" class="text-white hover:text-red-400 text-2xl transition-colors">
+    <i class="fas fa-envelope"></i>
+</a>
+
+                    <a href="https://linkedin.com" class="text-white hover:text-blue-400 text-2xl transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/994" class="text-white hover:text-green-400 text-2xl transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+<p data-i18n="copyright" data-i18n-options='{"year": 2025}'></p>
+    © <span id="currentYear"></span> Sarah Ahmed Wasif.
+  </p>
+</div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent actual form submission
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Build Gmail compose URL
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=ahmedwasifsarah@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\n${message}`
+    )}`;
+
+    // Open Gmail compose in new tab
+    window.open(gmailURL, '_blank');
+
+     // Clear the form fields
+    document.getElementById('contact-form').reset();
+});
+</script>
+
+<script>
+  const currentYear = new Date().getFullYear();
+  document.querySelector('[data-i18n="copyright"]').setAttribute('data-i18n-options', JSON.stringify({ year: currentYear }));
+
+  // Then trigger your i18n library to re-translate this element, e.g.:
+  if (typeof i18next !== 'undefined' && i18next.exists) {
+    i18next.changeLanguage(i18next.language); // Or rerun the render logic
+  }
+</script>
+
+
+</body>
+</html>

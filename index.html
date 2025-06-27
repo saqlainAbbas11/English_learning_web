@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your English Teacher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-primary-700 dark:bg-primary-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold font-serif">MS. TEACHER</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <select id="language-selector" class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-1 rounded-md text-sm focus:outline-none">
+                            <option value="en">English</option>
+                            <option value="az">Azerbaijani</option>
+                             <option value="tr">Turkish</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ru">Russian</option>
+                        </select>
+                    </div>
+                    <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-white font-medium border-b-2 border-white pb-1" data-i18n="home">Home</a></li>
+                    <li><a href="about.html" class="text-white font-medium hover:border-b-2 hover:border-white pb-1" data-i18n="about">About</a></li>
+                    <li><a href="contact.html" class="text-white font-medium hover:border-b-2 hover:border-white pb-1" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="flex flex-col md:flex-row items-center gap-8 md:gap-6 lg:gap-8 xl:gap-10 mb-16">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="English Teacher" 
+                     class="rounded-full w-64 h-64 object-cover shadow-xl mx-auto md:mx-0">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white" data-i18n="Sarah Ahmed Wasif">Sarah Ahmed Wasif</h2>
+                <h2 class="text-4xl font-bold mb-4 text-primary-800 dark:text-primary-200" data-i18n="welcome">Welcome!</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-6" data-i18n="intro-text">
+                    I'm Sarah Ahmed Wasif, an experienced English educator with a passion for helping students achieve fluency and confidence in English communication.
+                </p>
+                <div class="bg-primary-100 dark:bg-primary-900 p-6 rounded-lg shadow-inner">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-800 dark:text-primary-200" data-i18n="teaching-approach">My Teaching Approach</h3>
+                    <p class="text-gray-700 dark:text-gray-300" data-i18n="approach-details">
+                        I believe in creating a supportive and engaging learning environment where students feel comfortable making mistakes and learning from them. My classes combine structured learning with real-world applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-i18n="services">Services I Offer</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-primary-500 dark:text-primary-400 text-4xl mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white" data-i18n="one-on-one">One-on-One Lessons</h3>
+                    <p class="text-gray-600 dark:text-gray-300" data-i18n="one-on-one-desc">
+                        Personalized sessions tailored to your specific needs and learning goals.
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-primary-500 dark:text-primary-400 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white" data-i18n="group-classes">Group Classes</h3>
+                    <p class="text-gray-600 dark:text-gray-300" data-i18n="group-classes-desc">
+                        Interactive group sessions that encourage peer learning and communication.
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-primary-500 dark:text-primary-400 text-4xl mb-4">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white" data-i18n="business-english">Business English</h3>
+                    <p class="text-gray-600 dark:text-gray-300" data-i18n="business-english-desc">
+                        Specialized courses for professionals needing English for work environments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message from Students Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-i18n="testimonials">Messages from Students</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 dark:text-white">Aylin M.</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Advanced Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Ms. Teacher transformed my English skills completely. Her patience and creative teaching methods made learning enjoyable and effective."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 dark:text-white">Ruslan K.</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Business English</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Thanks to Ms. Teacher, I gained confidence in professional meetings. Her real-world examples were exactly what I needed for my career."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 dark:text-white">Leyla A.</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">IELTS Preparation</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">"I scored 8.0 on IELTS after just 3 months of lessons! Ms. Teacher's structured approach and feedback were invaluable."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Books Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white" data-i18n="recommended-books">Recommended Books</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL._SY425_.jpg" alt="To Kill a Mockingbird" class="w-full h-48 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 dark:text-white">To Kill a Mockingbird</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Harper Lee</p>
+                        <div class="mt-2 flex justify-between items-center">
+                            <span class="text-sm text-primary-600 dark:text-primary-400">Classic</span>
+                            <span class="text-xs bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded">Level: B2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://m.media-amazon.com/images/I/51mN3bY0JjL._SY425_.jpg" alt="1984" class="w-full h-48 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 dark:text-white">1984</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">George Orwell</p>
+                        <div class="mt-2 flex justify-between items-center">
+                            <span class="text-sm text-primary-600 dark:text-primary-400">Dystopian</span>
+                            <span class="text-xs bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded">Level: C1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://m.media-amazon.com/images/I/51OZerWcGCL._SY425_.jpg" alt="Pride and Prejudice" class="w-full h-48 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 dark:text-white">Pride and Prejudice</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Jane Austen</p>
+                        <div class="mt-2 flex justify-between items-center">
+                            <span class="text-sm text-primary-600 dark:text-primary-400">Romance</span>
+                            <span class="text-xs bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded">Level: B2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="data:image/jpeg;base64,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" alt="The Great Gatsby" class="w-full h-48 object-contain p-4">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 dark:text-white">Headway Pre-intermediate</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Paul Hancock</p>
+                        <div class="mt-2 flex justify-between items-center">
+                            <span class="text-sm text-primary-600 dark:text-primary-400">Classic</span>
+                            <span class="text-xs bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-2 py-1 rounded">Level: B2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium" data-i18n="view-more-books">
+                    View more recommendations
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-primary-100 dark:bg-primary-900 p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white" data-i18n="education">Education & Qualifications</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-semibold text-lg mb-2 text-primary-700 dark:text-primary-300" data-i18n="degree">Master's in English Literature</h3>
+                    <p class="text-gray-600 dark:text-gray-300" data-i18n="university">Baku State University</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="year">2010-2012</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                    <h3 class="font-semibold text-lg mb-2 text-primary-700 dark:text-primary-300" data-i18n="certification">TEFL Certification</h3>
+                    <p class="text-gray-600 dark:text-gray-300" data-i18n="tefl-org">International TEFL Organization</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm" data-i18n="cert-year">2013</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">MS. TEACHER</h2>
+                    <p class="text-gray-400" data-i18n="footer-motto">Empowering students through language</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/english_speakingwithsarah?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-white hover:text-pink-400 text-2xl transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedwasifsarah@gmail.com" target="_blank" class="text-white hover:text-red-400 text-2xl transition-colors">
+    <i class="fas fa-envelope"></i>
+</a>
+
+                    <a href="https://linkedin.com" class="text-white hover:text-blue-400 text-2xl transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/994" class="text-white hover:text-green-400 text-2xl transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+<p data-i18n="copyright" data-i18n-options='{"year": 2025}'></p>
+    © <span id="currentYear"></span> Sarah Ahmed Wasif.
+  </p>
+</div>
+        
+        </div>
+    </footer>
+
+    <script>
+  const currentYear = new Date().getFullYear();
+  document.querySelector('[data-i18n="copyright"]').setAttribute('data-i18n-options', JSON.stringify({ year: currentYear }));
+
+  // Then trigger your i18n library to re-translate this element, e.g.:
+  if (typeof i18next !== 'undefined' && i18next.exists) {
+    i18next.changeLanguage(i18next.language); // Or rerun the render logic
+  }
+</script>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
